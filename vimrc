@@ -35,6 +35,9 @@ set number
 set ttyfast
 set nowrap
 
+"Fullscreen DLL support: http://www.vim.org/scripts/script.php?script_id=2596
+map <F11> <Esc>:call libcallnr("gvimfullscreen.dll", "ToggleFullScreen", 0)<CR> 
+
 "looks
 colorscheme molokai
 set guifont=Liberation_Mono:h11
