@@ -39,6 +39,7 @@ set nowrap
 map <F11> <Esc>:call libcallnr("gvimfullscreen.dll", "ToggleFullScreen", 0)<CR> 
 
 "looks
+colo molokai
 colorscheme molokai
 set guifont=Liberation_Mono:h11
 set autochdir
