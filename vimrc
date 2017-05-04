@@ -2,6 +2,8 @@ call plug#begin('~/vimfiles/plugged')
 Plug 'skywind3000/asyncrun.vim'
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'tomasr/molokai'
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
 call plug#end()
 
 "extra CtrlP settings
@@ -34,7 +36,6 @@ set ttyfast
 set nowrap
 
 "looks
-colo molokai
 colorscheme molokai
 set guifont=Liberation_Mono:h11
 set autochdir
@@ -43,6 +44,11 @@ set guioptions-=m "remove menu bar
 set guioptions-=T "remove tool bar
 set guioptions-=r "remove right-hand scrollbar
 set guioptions-=L "remove left-hand scrollbar
+set vb t_vb=
+:set laststatus=2
+
+"Configure Airline
+let g:airline_theme='molokai'
 
 "inoremap jk <esc> 
 "inoremap <esc> <nop> 
@@ -61,3 +67,4 @@ nnoremap <m-m> :call BuildProject()<CR>
 nnoremap <m-n> :cn<CR>
 nnoremap <m-p> :cp<CR>
 
+cd C:/programming
