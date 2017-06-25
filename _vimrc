@@ -17,6 +17,9 @@ set nowrap
 set switchbuf=useopen,split
 
 set noswapfile
+set incsearch
+set hlsearch
+set cindent
 set guioptions-=m
 set guioptions-=T
 set guioptions-=r
