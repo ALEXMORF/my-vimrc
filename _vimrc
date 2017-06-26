@@ -54,13 +54,15 @@ function! BuildProject()
     wa
     "set makeprg=build.bat
     AsyncRun build.bat
-    copen
+    botright copen
+    call feedkeys("\<c-w>\<c-p>")
 endfunction
 
 nnoremap <m-m> :call BuildProject()<CR>
 nnoremap <m-r> :AsyncRun ..\build\win32_main.exe<CR>
 nnoremap <m-n> :cn<CR>
 nnoremap <m-p> :cp<CR>
+nnoremap <m-,> :cclose<CR>
 inoremap jk <ESC>
 inoremap <esc> <nop>
 
