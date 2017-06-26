@@ -34,6 +34,11 @@ filetype plugin indent on
 syntax on
 set completeopt=longest,menuone,preview
 
+"a better cursor
+highlight Cursor guifg=#191970 guibg=#40FF40
+set cursorline
+highlight CursorLine guifg=fg guibg=#191970
+
 "highlight my keywords
 highlight TodoHighlight guifg=red guibg=bg gui=bold
 highlight NoteHighlight guifg=green guibg=bg gui=bold
@@ -52,7 +57,6 @@ Plug 'xolox/vim-misc'
 Plug 'xolox/vim-shell'
 Plug 'xolox/vim-session'
 call plug#end()
-
 
 autocmd! BufNewFile, BufRead *.glsl *.geom *.vert *.frag set filetype=glsl
 
