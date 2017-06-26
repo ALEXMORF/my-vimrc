@@ -15,9 +15,8 @@ set expandtab
 set ttyfast
 set nowrap
 set switchbuf=useopen,split
-
-colorscheme handmade
 set guifont=Liberation_Mono:h11
+colorscheme handmade
 
 set noswapfile
 set incsearch
@@ -35,12 +34,12 @@ syntax on
 set completeopt=longest,menuone,preview
 
 "highlight my keywords
-highlight TodoHighlight guifg=bg guibg=red
-highlight NoteHighlight guifg=bg guibg=green
-highlight ImportantHighlight guifg=bg guibg=yellow
-match NoteHighlight /NOTE/
-2match ImportantHighlight /IMPORTANT/
-3match TodoHighlight /TODO/
+highlight TodoHighlight guifg=red guibg=bg gui=bold
+highlight NoteHighlight guifg=green guibg=bg gui=bold
+highlight ImportantHighlight guifg=yellow guibg=bg gui=bold
+let m1 = matchadd("TodoHighlight", "TODO")
+let m2 = matchadd("NoteHighlight", "NOTE")
+let m3 = matchadd("ImportantHighlight", "IMPORTANT")
 
 call plug#begin()
 Plug 'skywind3000/asyncrun.vim'
@@ -52,6 +51,7 @@ Plug 'xolox/vim-misc'
 Plug 'xolox/vim-shell'
 Plug 'xolox/vim-session'
 call plug#end()
+
 
 autocmd! BufNewFile, BufRead *.glsl *.geom *.vert *.frag set filetype=glsl
 
