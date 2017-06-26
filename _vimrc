@@ -87,3 +87,6 @@ inoremap <esc> <nop>
 let mapleader = ' '
 let g:mapleader = ' '
 nnoremap <leader>v :e $HOME/_vimrc<CR>
+
+ab os OpenSession
+ab ss SaveSession
