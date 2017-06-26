@@ -39,7 +39,8 @@ Plug 'tikhomirov/vim-glsl'
 Plug 'ervandew/supertab'
 Plug 'craigemery/vim-autotag'
 Plug 'ctrlpvim/ctrlp.vim'
-Plug 'vim-scripts/taglist.vim'
+Plug 'xolox/vim-misc'
+Plug 'xolox/vim-shell'
 call plug#end()
 
 autocmd! BufNewFile, BufRead *.glsl *.geom *.vert *.frag set filetype=glsl
@@ -47,8 +48,6 @@ autocmd! BufNewFile, BufRead *.glsl *.geom *.vert *.frag set filetype=glsl
 let g:autotagTagsFile='./tags'
 let g:autotagCtagsCmd='C:/ctags/ctags.exe'
 set tags+=./tags
-
-let Tlist_Ctags_Cmd='C:/ctags/ctags.exe'
 
 "handmade build
 function! BuildProject()
@@ -71,4 +70,11 @@ let mapleader = ' '
 let g:mapleader = ' '
 nnoremap <leader>v :e $HOME/_vimrc<CR>
 
+"directory shorcuts
+function! GotoMonter()
+    :e c:\programming\c++_file\game_project\monter\code\monter.cpp
+endfunction
 
+function! GotoEos()
+    :e c:\programming\c++_file\other people's code\eos\code\eos_game.cpp
+endfunction
