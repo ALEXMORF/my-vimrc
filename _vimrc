@@ -16,6 +16,9 @@ set ttyfast
 set nowrap
 set switchbuf=useopen,split
 
+colorscheme handmade
+set guifont=Liberation_Mono:h11
+
 set noswapfile
 set incsearch
 set hlsearch
@@ -25,9 +28,6 @@ set guioptions-=T
 set guioptions-=r
 set guioptions-=L
 set vb t_vb=
-colorscheme handmade
-set guifont=Liberation_Mono:h11
-hi VertSplit guifg=#888888 guibg=#222222 gui=bold
 
 filetype plugin indent on
 syntax on
