@@ -38,6 +38,8 @@ Plug 'skywind3000/asyncrun.vim'
 Plug 'tikhomirov/vim-glsl'
 Plug 'ervandew/supertab'
 Plug 'craigemery/vim-autotag'
+Plug 'ctrlpvim/ctrlp.vim'
+Plug 'vim-scripts/taglist.vim'
 call plug#end()
 
 autocmd! BufNewFile, BufRead *.glsl *.geom *.vert *.frag set filetype=glsl
@@ -46,9 +48,8 @@ let g:autotagTagsFile='./tags'
 let g:autotagCtagsCmd='C:/ctags/ctags.exe'
 set tags+=./tags
 
-let g:fullscreen#start_command = "call rpcnotify(0, 'Gui', 'WindowFullScreen', 1)"
-let g:fullscreen#stop_command = "call rpcnotify(0, 'Gui', 'WindowFullScreen', 0)"
-"
+let Tlist_Ctags_Cmd='C:/ctags/ctags.exe'
+
 "handmade build
 function! BuildProject()
     wa
