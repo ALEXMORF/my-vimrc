@@ -37,6 +37,7 @@ set laststatus=2
 
 "a better cursor
 highlight Cursor guifg=#191970 guibg=#40FF40
+highlight CursorLine guifg=fg guibg=#191970
 highlight VertSplit guibg=bg guifg=fg
 highlight LineNr guibg=#252525 guifg=grey
 
@@ -50,10 +51,10 @@ let m3 = matchadd("ImportantHighlight", "IMPORTANT")
 
 call plug#begin()
 Plug 'skywind3000/asyncrun.vim'
+Plug 'kien/ctrlp.vim'
 Plug 'tikhomirov/vim-glsl'
 Plug 'ervandew/supertab'
 Plug 'craigemery/vim-autotag'
-Plug 'ctrlpvim/ctrlp.vim'
 Plug 'xolox/vim-misc'
 Plug 'xolox/vim-shell'
 Plug 'xolox/vim-session'
