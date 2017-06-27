@@ -1,11 +1,11 @@
 set nocompatible
-set clipboard+=unnamedplus
+behave mswin
+
 set autochdir
 set fileformat=unix
 set autoread
 set ignorecase
 set smartcase
-behave mswin
 
 set hidden
 set ruler
