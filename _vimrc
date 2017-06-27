@@ -1,5 +1,8 @@
 set nocompatible
 behave mswin
+filetype plugin indent on
+syntax on
+set completeopt=longest,menuone,preview
 
 set autochdir
 set fileformat=unix
@@ -31,10 +34,6 @@ set guioptions-=r
 set guioptions-=L
 set vb t_vb=
 set laststatus=2
-
-filetype plugin indent on
-syntax on
-set completeopt=longest,menuone,preview
 
 "a better cursor
 highlight Cursor guifg=#191970 guibg=#40FF40
