@@ -7,6 +7,8 @@ set autoread
 set ignorecase
 set smartcase
 
+set relativenumber
+set number
 set hidden
 set ruler
 set backspace=indent,eol,start
@@ -36,8 +38,8 @@ set completeopt=longest,menuone,preview
 
 "a better cursor
 highlight Cursor guifg=#191970 guibg=#40FF40
-set cursorline
-highlight CursorLine guifg=fg guibg=#191970
+highlight VertSplit guibg=bg guifg=fg
+highlight LineNr guibg=#252525 guifg=grey
 
 "highlight my keywords
 highlight TodoHighlight guifg=red guibg=bg gui=bold
