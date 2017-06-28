@@ -13,7 +13,6 @@ set smartcase
 set relativenumber
 set number
 set hidden
-set ruler
 set backspace=indent,eol,start
 set tabstop=4
 set shiftwidth=4
@@ -23,6 +22,7 @@ set nowrap
 set switchbuf=useopen,split
 set guifont=Liberation_Mono:h11
 colorscheme handmade
+set ruler
 
 set noswapfile
 set incsearch
@@ -32,8 +32,8 @@ set guioptions-=m
 set guioptions-=T
 set guioptions-=r
 set guioptions-=L
-set vb t_vb=
 set laststatus=2
+set vb t_vb=
 
 "a better cursor
 highlight Cursor guifg=#191970 guibg=#40FF40
@@ -58,6 +58,8 @@ Plug 'craigemery/vim-autotag'
 Plug 'xolox/vim-misc'
 Plug 'xolox/vim-shell'
 Plug 'xolox/vim-session'
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
 call plug#end()
 
 autocmd! BufNewFile, BufRead *.glsl *.geom *.vert *.frag set filetype=glsl
@@ -68,6 +70,8 @@ set tags+=./tags
 
 let g:session_autosave='no'
 let g:session_autoload='no'
+
+let g:airline_theme="molokai"
 
 "handmade build
 function! BuildProject()
