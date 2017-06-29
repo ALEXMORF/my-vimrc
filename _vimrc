@@ -2,6 +2,7 @@ set nocompatible
 behave mswin
 filetype plugin indent on
 syntax on
+set wildmenu
 set completeopt=longest,menuone,preview
 
 set autochdir
@@ -41,14 +42,6 @@ highlight CursorLine guifg=fg guibg=#191970
 highlight VertSplit guibg=bg guifg=fg
 highlight LineNr guibg=#252525 guifg=grey
 
-"highlight my keywords
-highlight TodoHighlight guifg=red guibg=bg gui=bold
-highlight NoteHighlight guifg=green guibg=bg gui=bold
-highlight ImportantHighlight guifg=yellow guibg=bg gui=bold
-let m1 = matchadd("TodoHighlight", "TODO")
-let m2 = matchadd("NoteHighlight", "NOTE")
-let m3 = matchadd("ImportantHighlight", "IMPORTANT")
-
 call plug#begin()
 Plug 'skywind3000/asyncrun.vim'
 Plug 'kien/ctrlp.vim'
@@ -72,6 +65,14 @@ let g:session_autosave='no'
 let g:session_autoload='no'
 
 let g:airline_theme="molokai"
+
+"highlight my keywords
+highlight TodoHighlight guifg=red guibg=bg gui=bold
+highlight NoteHighlight guifg=green guibg=bg gui=bold
+highlight ImportantHighlight guifg=yellow guibg=bg gui=bold
+let m1 = matchadd("TodoHighlight", "TODO")
+let m2 = matchadd("NoteHighlight", "NOTE")
+let m3 = matchadd("ImportantHighlight", "IMPORTANT")
 
 "handmade build
 function! BuildProject()
