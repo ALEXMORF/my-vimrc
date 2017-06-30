@@ -1,3 +1,7 @@
+"TODO(chen):
+" . Quickfix grep splits window automatically, stop that and make it behave
+" like emacs
+
 set nocompatible
 behave mswin
 filetype plugin indent on
@@ -42,6 +46,14 @@ highlight CursorLine guifg=fg guibg=#191970
 highlight VertSplit guibg=bg guifg=fg
 highlight LineNr guibg=#252525 guifg=grey
 
+"highlight my keywords
+highlight TodoHighlight guifg=red guibg=bg gui=bold
+highlight NoteHighlight guifg=green guibg=bg gui=bold
+highlight ImportantHighlight guifg=yellow guibg=bg gui=bold
+let m1 = matchadd("TodoHighlight", "TODO")
+let m2 = matchadd("NoteHighlight", "NOTE")
+let m3 = matchadd("ImportantHighlight", "IMPORTANT")
+
 call plug#begin()
 Plug 'skywind3000/asyncrun.vim'
 Plug 'kien/ctrlp.vim'
@@ -56,6 +68,8 @@ Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 call plug#end()
 
+let g:airline_theme="molokai"
+
 autocmd! BufNewFile, BufRead *.glsl *.geom *.vert *.frag set filetype=glsl
 
 let g:autotagTagsFile='./tags'
@@ -64,16 +78,6 @@ set tags+=./tags
 
 let g:session_autosave='no'
 let g:session_autoload='no'
-
-let g:airline_theme="molokai"
-
-"highlight my keywords
-highlight TodoHighlight guifg=red guibg=bg gui=bold
-highlight NoteHighlight guifg=green guibg=bg gui=bold
-highlight ImportantHighlight guifg=yellow guibg=bg gui=bold
-let m1 = matchadd("TodoHighlight", "TODO")
-let m2 = matchadd("NoteHighlight", "NOTE")
-let m3 = matchadd("ImportantHighlight", "IMPORTANT")
 
 "handmade build
 function! BuildProject()
@@ -92,9 +96,9 @@ nnoremap <m-,> :cclose<CR>
 inoremap jk <ESC>
 inoremap <esc> <nop>
 
-"clang formatter
+"clang formatter with python
 map <C-K> :pyf C:\Program Files (x86)\LLVM\share\clang\clang-format.py<cr>
-imap <C-K><c-o>:pyf C:\Program Files (x86)\LLVM\share\clang\clang-format.py<cr>
+imap <C-K> <c-o>:pyf C:\Program Files (x86)\LLVM\share\clang\clang-format.py<cr>
 
 let mapleader = ' '
 let g:mapleader = ' '
