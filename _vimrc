@@ -24,7 +24,7 @@ set shiftwidth=4
 set expandtab
 set ttyfast
 set nowrap
-set switchbuf=useopen,split
+set switchbuf=useopen,usetab
 set guifont=Liberation_Mono:h11
 colorscheme handmade
 set ruler
