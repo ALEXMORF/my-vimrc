@@ -92,6 +92,10 @@ nnoremap <m-,> :cclose<CR>
 inoremap jk <ESC>
 inoremap <esc> <nop>
 
+"clang formatter
+map <C-K> :pyf C:\Program Files (x86)\LLVM\share\clang\clang-format.py<cr>
+imap <C-K><c-o>:pyf C:\Program Files (x86)\LLVM\share\clang\clang-format.py<cr>
+
 let mapleader = ' '
 let g:mapleader = ' '
 nnoremap <leader>v :e $HOME/_vimrc<CR>
