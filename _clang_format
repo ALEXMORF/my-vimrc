@@ -20,4 +20,3 @@ BraceWrapping:
     AfterUnion: true
     BeforeCatch: true
     BeforeElse: true
-    IndentBraces: true
