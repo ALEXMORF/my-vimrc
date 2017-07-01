@@ -5,7 +5,7 @@ Language: Cpp
 DerivePointerAlignment: true
 AlignConsecutiveAssignments: true
 AlignOperands: true
-ColumnLimit: 100
+ColumnLimit: 80
 IndentCaseLabels: true
 SpaceBeforeAssignmentOperators: true
 SortIncludes: false
