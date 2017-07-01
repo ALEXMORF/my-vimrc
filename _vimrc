@@ -94,6 +94,9 @@ imap <C-K> <c-o>:pyf C:\Program Files (x86)\LLVM\share\clang\clang-format.py<cr>
 let mapleader = ' '
 let g:mapleader = ' '
 nnoremap <leader>v :e $HOME/_vimrc<CR>
+nnoremap <leader>n :noh<CR>
+nnoremap <leader>b :call BuildProject()<CR>
+nnoremap <leader>, :cclose<CR>
 
 ab os OpenSession
 ab ss SaveSession
