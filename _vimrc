@@ -1,7 +1,3 @@
-"TODO(chen):
-" . Quickfix grep splits window automatically, stop that and make it behave
-" like emacs
-
 set nocompatible
 behave mswin
 filetype plugin indent on
@@ -26,7 +22,6 @@ set ttyfast
 set nowrap
 set switchbuf=useopen,usetab
 set guifont=Liberation_Mono:h11
-colorscheme handmade
 set ruler
 
 set noswapfile
@@ -66,9 +61,10 @@ Plug 'xolox/vim-shell'
 Plug 'xolox/vim-session'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
+Plug 'morhetz/gruvbox'
 call plug#end()
 
-let g:airline_theme="molokai"
+colorscheme gruvbox
 
 autocmd! BufNewFile, BufRead *.glsl *.geom *.vert *.frag set filetype=glsl
 
