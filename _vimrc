@@ -35,20 +35,6 @@ set guioptions-=L
 set laststatus=2
 set vb t_vb=
 
-"a better cursor
-highlight Cursor guifg=#191970 guibg=#40FF40
-highlight CursorLine guifg=fg guibg=#191970
-highlight VertSplit guibg=bg guifg=fg
-highlight LineNr guibg=#252525 guifg=grey
-
-"highlight my keywords
-highlight TodoHighlight guifg=red guibg=bg gui=bold
-highlight NoteHighlight guifg=green guibg=bg gui=bold
-highlight ImportantHighlight guifg=yellow guibg=bg gui=bold
-let m1 = matchadd("TodoHighlight", "TODO")
-let m2 = matchadd("NoteHighlight", "NOTE")
-let m3 = matchadd("ImportantHighlight", "IMPORTANT")
-
 call plug#begin()
 Plug 'skywind3000/asyncrun.vim'
 Plug 'kien/ctrlp.vim'
@@ -65,6 +51,15 @@ Plug 'morhetz/gruvbox'
 call plug#end()
 
 colorscheme gruvbox
+
+"highlight my keywords
+highlight VertSplit guibg=bg 
+highlight TodoHighlight guifg=red guibg=bg gui=bold
+highlight NoteHighlight guifg=green guibg=bg gui=bold
+highlight ImportantHighlight guifg=yellow guibg=bg gui=bold
+let m1 = matchadd("TodoHighlight", "TODO")
+let m2 = matchadd("NoteHighlight", "NOTE")
+let m3 = matchadd("ImportantHighlight", "IMPORTANT")
 
 autocmd! BufNewFile, BufRead *.glsl *.geom *.vert *.frag set filetype=glsl
 
