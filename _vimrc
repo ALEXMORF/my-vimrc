@@ -39,6 +39,8 @@ call plug#begin()
 Plug 'skywind3000/asyncrun.vim'
 Plug 'kien/ctrlp.vim'
 Plug 'tikhomirov/vim-glsl'
+Plug 'mattn/emmet-vim'
+Plug 'tpope/vim-commentary'
 Plug 'ervandew/supertab'
 Plug 'craigemery/vim-autotag'
 Plug 'tpope/vim-surround'
@@ -61,7 +63,7 @@ let m1 = matchadd("TodoHighlight", "TODO")
 let m2 = matchadd("NoteHighlight", "NOTE")
 let m3 = matchadd("ImportantHighlight", "IMPORTANT")
 
-autocmd! BufNewFile, BufRead *.glsl *.geom *.vert *.frag set filetype=glsl
+autocmd! BufNewFile, BufRead *.glsl set filetype=glsl
 
 let g:autotagTagsFile='./tags'
 let g:autotagCtagsCmd='C:/ctags/ctags.exe'
@@ -95,8 +97,7 @@ let mapleader = ' '
 let g:mapleader = ' '
 nnoremap <leader>v :e $HOME/_vimrc<CR>
 nnoremap <leader>n :noh<CR>
-nnoremap <leader>b :call BuildProject()<CR>
-nnoremap <leader>, :cclose<CR>
+nnoremap <leader>r :AsyncRun ..\build\win32_main.exe<CR>
 
 ab os OpenSession
 ab ss SaveSession
