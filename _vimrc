@@ -96,6 +96,7 @@ imap <C-K> <c-o>:pyf C:\Program Files (x86)\LLVM\share\clang\clang-format.py<cr>
 
 let mapleader = ' '
 let g:mapleader = ' '
+let g:user_emmet_leader_key='<C-E>'
 nnoremap <leader>v :e $HOME/_vimrc<CR>
 nnoremap <leader>n :noh<CR>
 nnoremap <leader>r :AsyncRun ..\build\win32_main.exe<CR>
