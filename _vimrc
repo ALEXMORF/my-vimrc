@@ -43,6 +43,7 @@ Plug 'xolox/vim-session'
 Plug 'xolox/vim-shell'
 Plug 'wlangstroth/vim-racket'
 Plug 'tikhomirov/vim-glsl'
+Plug 'beyondmarc/hlsl.vim'
 Plug 'ervandew/supertab'
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'vim-airline/vim-airline'
@@ -72,6 +73,9 @@ nnoremap <m-p> :cp<CR>
 nnoremap <m-,> :cclose<CR>
 
 :nnoremap <silent> <F5> :let _s=@/ <Bar> :%s/\s\+$//e <Bar> :let @/=_s <Bar> :nohl <Bar> :unlet _s <CR>
+
+" cpp/h file fast switch
+map <m-2> :e %:p:s,.h$,.X123X,:s,.cpp$,.h,:s,.X123X$,.cpp,<CR>
 
 " Microsoft MSBuild
 set errorformat+=\\\ %#%f(%l\\\,%c):\ %m
