@@ -21,7 +21,7 @@ set expandtab
 set ttyfast
 set nowrap
 set switchbuf=useopen,usetab
-set guifont=Liberation_Mono:h12
+set guifont=Liberation_Mono:h11
 set ruler
 
 set noswapfile
@@ -45,7 +45,6 @@ Plug 'wlangstroth/vim-racket'
 Plug 'tikhomirov/vim-glsl'
 Plug 'ervandew/supertab'
 Plug 'ctrlpvim/ctrlp.vim'
-Plug 'ludovicchabant/vim-gutentags'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'morhetz/gruvbox'
@@ -54,7 +53,7 @@ call plug#end()
 
 let g:session_autosave='no'
 
-colorscheme onedark
+colorscheme gruvbox
 inoremap jk <ESC>
 
 "handmade build
@@ -73,3 +72,10 @@ nnoremap <m-p> :cp<CR>
 nnoremap <m-,> :cclose<CR>
 
 :nnoremap <silent> <F5> :let _s=@/ <Bar> :%s/\s\+$//e <Bar> :let @/=_s <Bar> :nohl <Bar> :unlet _s <CR>
+
+" Microsoft MSBuild
+set errorformat+=\\\ %#%f(%l\\\,%c):\ %m
+" Microsoft compiler: cl.exe
+set errorformat+=\\\ %#%f(%l)\ :\ %#%t%[A-z]%#\ %m
+" Microsoft HLSL compiler: fxc.exe
+set errorformat+=\\\ %#%f(%l\\\,%c-%*[0-9]):\ %#%t%[A-z]%#\ %m
